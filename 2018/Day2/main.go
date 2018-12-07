@@ -62,7 +62,7 @@ func main() {
 	f.Close()
 }
 
-func diff(a string, b string) ([]rune, int) {
+func removeDifferentChars(a string, b string) ([]rune, int) {
 	count := 0
 	same := make([]rune, 0)
 	for in := range a {
