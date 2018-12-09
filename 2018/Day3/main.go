@@ -47,8 +47,8 @@ func main() {
 		for i = left; i < left+width; i++ {
 			for j = top; j < top+height; j++ {
 				big[i][j]++
-				//if big[i][j] == 2 {
-					if big[i][j] == 2 {
+				if big[i][j] == 2 {
+					//if big[i][j] > 1 {
 					overlaps++
 				}
 			}
