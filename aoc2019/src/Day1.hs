@@ -1,5 +1,4 @@
-readLines :: FilePath -> IO [String]
-readLines = fmap lines . readFile
+module Day1 (part1, part2) where
 
 
 computeFuel :: Int -> Int
@@ -25,8 +24,3 @@ part1 = sum . map computeFuel
 part2 :: [Int] -> Int
 part2 = sum . map moduleFuel
 
-main = do 
-    stringMasses <- readLines "input"
-    let masses = map (\sm -> read sm :: Int) stringMasses 
-    putStrLn (show (part1 masses))
-    putStrLn (show (part2 masses))
