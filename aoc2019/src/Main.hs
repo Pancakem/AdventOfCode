@@ -2,9 +2,9 @@ module Main where
 
 import Day1 (part1, part2)
 import Day2(parseInput, exec, calcNounVerb)
+import Day3 (performInput)
 
-readLines :: FilePath -> IO [String]
-readLines = fmap lines . readFile
+import Util (readLines)
 
 main = do 
   putStrLn "DAY 1: \n"
@@ -19,6 +19,8 @@ main = do
   putStrLn ("Part 1: " ++ (show (head stat)))
   let nounVerb = calcNounVerb input
   putStrLn ("Part 2: " ++ (show nounVerb))
+  performInput
+
 
 
   

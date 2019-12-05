@@ -1,6 +1,6 @@
 module Day2 (parseInput, exec, calcNounVerb) where
 
-import Data.List (unfoldr)
+import Util(separateBy)
 
 type Destination = Int
 type Source = Int
@@ -11,11 +11,6 @@ data Instruction =
     Add Source Source Destination
     | Multiply Source Source Destination
     | Halt deriving (Show)
-
-separateBy :: Eq a => a -> [a] -> [[a]]
-separateBy chr = unfoldr sep where
-  sep [] = Nothing
-  sep l  = Just . fmap (drop 1) . break (== chr) $ l
 
 
 replaceNth :: Int -> a -> [a] -> [a]
