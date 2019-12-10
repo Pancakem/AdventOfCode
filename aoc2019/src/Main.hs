@@ -3,6 +3,7 @@ module Main where
 import Day1 (part1, part2)
 import Day2(parseInput, exec, calcNounVerb)
 import Day3 (performInput)
+import qualified Day4 as D4
 
 import Util (readLines)
 
@@ -20,6 +21,7 @@ main = do
   let nounVerb = calcNounVerb input
   putStrLn ("Part 2: " ++ (show nounVerb))
   performInput
+  D4.day4 
 
 
 
